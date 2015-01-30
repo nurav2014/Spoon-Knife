@@ -5,9 +5,9 @@
     </target>
 
     <target name="compile">
-        <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes"  classpath="src/selenium.jar"/>
-        <dirset id="dist.contents" dir="build/classes" includes="*"/>                                            
+        <mkdir dir="build"/>
+        <javac srcdir="src" destdir="build"  classpath="src/selenium.jar"/>
+        <dirset id="dist.contents" dir="build" includes="*.class"/>                                            
 <property name="prop.dist.contents" refid="dist.contents"/>        
 <echo>${prop.dist.contents}</echo>
     </target>
@@ -28,7 +28,7 @@
   />
 </target>
     <target name="run">
-        <java classname="build/classes/navigateToNFLScoreboard.class">
+        <java dir="build" classname="navigateToNFLScoreboard">
          <classpath>
           
             <pathelement location="src/selenium.jar"/>
