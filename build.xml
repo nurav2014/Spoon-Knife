@@ -10,6 +10,13 @@
         
     </target>
 
+ <path id="build.classpath">
+    <fileset dir="src">
+      <include name="**/*.jar" />
+       <include name="*.jar" />
+        <include name="selenium.jar" />
+    </fileset>
+  </path>
     <target name="jar">
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
@@ -22,7 +29,7 @@
     <target name="run">
      <java jar="build/jar/HelloWorld.jar" fork="true">
          <classpath>
-          
+          <pathelement path="${build.classpath}"
             <pathelement location="src/selenium.jar"/>
          </classpath>
         </java>
