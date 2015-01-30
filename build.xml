@@ -19,7 +19,12 @@
   </path>
     <target name="jar">
         <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/HelloWorld.jar" basedir="build">
+<copydir src="src"
+           dest="build/classes"
+           includes="selenium.jar"
+           excludes="**/*.java"
+  />
+        <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
              <manifest>
                 <attribute name="Main-Class" value="navigateToNFLScoreboard"/>
             </manifest>
