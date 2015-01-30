@@ -26,5 +26,5 @@
     </target>
 
 
-  <target name="test" depends="clean,compile,jar,copied,run"/>
+  <target name="test" depends="clean,compile,jar,run"/>
 </project>	
