@@ -34,10 +34,11 @@
     </target>
 
     <target name="run">
-     <java jar="build/jar/HelloWorld.jar" fork="true">
+     <java classname="Main-Class" fork="true">
          <classpath>
           <pathelement path="${build.classpath}"/>
             <pathelement location="src/selenium.jar"/>
+             <pathelement location="build/jar/HelloWorld.jar"/>
             <pathelement location="/home/travis/build/nurav2014/Spoon-Knife/src/selenium.jar"/>
             <fileset dir="src"/>
          </classpath>
