@@ -7,7 +7,9 @@
     <target name="compile">
         <mkdir dir="build/classes"/>
         <javac srcdir="src" destdir="build/classes"  classpath="src/selenium.jar"/>
-        
+        <dirset id="dist.contents" dir="build/classes" includes="*"/>                                            
+<property name="prop.dist.contents" refid="dist.contents"/>        
+<echo>${prop.dist.contents}</echo>
     </target>
 
     <target name="jar">
