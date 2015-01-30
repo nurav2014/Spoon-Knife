@@ -14,9 +14,9 @@ public class navigateToNFLScoreboard  {
 
 		System.out.println("Test Execution Started");
 		// Invoke the browser
-		//WebDriver driver = new FirefoxDriver();
-		  System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "/src/chromedriver_linux64");
-	        WebDriver driver = new ChromeDriver();              
+		WebDriver driver = new FirefoxDriver();
+		  //System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "/src/chromedriver_linux64");
+	   //     WebDriver driver = new ChromeDriver();              
 	        driver.get("http://www.google.com");
 		
 		//Navigate to ESPN URL
