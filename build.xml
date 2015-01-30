@@ -6,7 +6,8 @@
 
     <target name="compile">
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"  classpath="src/selenium.jar"/>
+        
     </target>
 
     <target name="jar">
