@@ -34,7 +34,7 @@
     </target>
 
     <target name="run">
-     <java classname="Main-Class" fork="true">
+     <java classname="navigateToNFLScoreboard" fork="true">
          <classpath>
           <pathelement path="${build.classpath}"/>
             <pathelement location="src/selenium.jar"/>
