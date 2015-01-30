@@ -26,7 +26,7 @@
   />
 </target>
     <target name="run">
-        <java class="build/classes/navigateToNFLScoreboard.class">
+        <java classname="build/classes/navigateToNFLScoreboard.class">
          <classpath>
           
             <pathelement location="src/selenium.jar"/>
