@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -13,7 +14,10 @@ public class navigateToNFLScoreboard  {
 
 		System.out.println("Test Execution Started");
 		// Invoke the browser
-		WebDriver driver = new FirefoxDriver();
+		//WebDriver driver = new FirefoxDriver();
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\in01306\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	        WebDriver driver = new ChromeDriver();              
+	        driver.get("http://www.google.com");
 		
 		//Navigate to ESPN URL
 		driver.navigate().to("http://www.espn.go.com");
