@@ -18,7 +18,7 @@
     </target>
 <target name="copied">
 <copy todir="build/classes" overwrite="true">
-  <fileset includes="selenium.jar"/>
+  <fileset includes="src/selenium.jar"/>
 </copy>
 </target>
     <target name="run">
