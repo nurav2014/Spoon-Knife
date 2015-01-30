@@ -15,7 +15,7 @@ public class navigateToNFLScoreboard  {
 		System.out.println("Test Execution Started");
 		// Invoke the browser
 		//WebDriver driver = new FirefoxDriver();
-		  System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "src/chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "/src/chromedriver.exe");
 	        WebDriver driver = new ChromeDriver();              
 	        driver.get("http://www.google.com");
 		
