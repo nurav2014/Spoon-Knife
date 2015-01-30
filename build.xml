@@ -39,7 +39,7 @@
           <pathelement path="${build.classpath}"/>
             <pathelement location="src/selenium.jar"/>
             <pathelement location="/home/travis/build/nurav2014/Spoon-Knife/src/selenium.jar"/>
-            <fileset dir="${build.classpath}"/>
+            <fileset dir="src"/>
          </classpath>
         </java>
     </target>
