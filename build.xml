@@ -19,14 +19,16 @@
         </jar>
     </target>
 <target name="copied">
-<copy todir="build/classes" overwrite="true">
-  <fileset includes="src/selenium.jar"/>
-</copy>
+<copydir src="src"
+           dest="build/classes"
+           includes="**/*.jar"
+           excludes="**/Test.java"
+  />
 </target>
     <target name="run">
         <java jar="build/jar/HelloWorld.jar" fork="true"/>
     </target>
 
 
-  <target name="test" depends="clean,compile,jar,run"/>
+  <target name="test" depends="clean,compile,jar,copied,run"/>
 </project>	
