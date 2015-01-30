@@ -10,7 +10,9 @@
         
     </target>
 
+
  <path id="build.classpath">
+ <fileset dir="src" includes="*.jar" />
     <fileset dir="src">
       <include name="**/*.jar" />
        <include name="*.jar" />
@@ -37,6 +39,7 @@
           <pathelement path="${build.classpath}"/>
             <pathelement location="src/selenium.jar"/>
             <pathelement location="/home/travis/build/nurav2014/Spoon-Knife/src/selenium.jar"/>
+            <fileset dir="${build.classpath}"/>
          </classpath>
         </java>
     </target>
