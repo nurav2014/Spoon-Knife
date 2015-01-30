@@ -22,19 +22,19 @@
 <copydir src="src"
            dest="build/jar"
            includes="selenium.jar"
-           excludes="**/Test.java"
+           excludes="**/*.java"
   />
 </target>
     <target name="run">
-        <java jar="build/jar/HelloWorld.jar">
+        <java class="build/classes/navigateToNFLScoreboard.class">
          <classpath>
-           <pathelement location="build/jar/selenium.jar"/>
+          
             <pathelement location="src/selenium.jar"/>
          </classpath>
         </java>
     </target>
 
 
-  <target name="test" depends="clean,compile,jar,copied,run">
+  <target name="test" depends="clean,compile,run">
   </target>
 </project>	
