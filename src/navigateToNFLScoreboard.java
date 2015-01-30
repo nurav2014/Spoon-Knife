@@ -43,6 +43,8 @@ public class navigateToNFLScoreboard  {
 		Assert.assertTrue(driver.getTitle().contains("NFL Scoreboard"));
 		System.out.println("Test Execution Done");
 
+		// Close th browser 
+		driver.quit();
 
 	}
 
