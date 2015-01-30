@@ -29,6 +29,7 @@
         <java jar="build/jar/HelloWorld.jar" fork="true">
          <classpath>
            <pathelement location="build/jar/selenium.jar"/>
+            <pathelement location="src/selenium.jar"/>
          </classpath>
         </java>
     </target>
