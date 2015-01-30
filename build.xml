@@ -20,7 +20,7 @@
     </target>
 <target name="copied">
 <copydir src="src"
-           dest="build/classes"
+           dest="build/jar"
            includes="**/*.jar"
            excludes="**/Test.java"
   />
