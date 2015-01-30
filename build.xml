@@ -29,7 +29,7 @@
     <target name="run">
      <java jar="build/jar/HelloWorld.jar" fork="true">
          <classpath>
-          <pathelement path="${build.classpath}"
+          <pathelement path="${build.classpath}"/>
             <pathelement location="src/selenium.jar"/>
          </classpath>
         </java>
