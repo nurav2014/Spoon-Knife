@@ -5,11 +5,9 @@
     </target>
 
     <target name="compile">
-        <mkdir dir="build"/>
-        <javac srcdir="src" destdir="build"  classpath="src/selenium.jar"/>
-        <dirset id="dist.contents" dir="build" includes="*.class"/>                                            
-<property name="prop.dist.contents" refid="dist.contents"/>        
-<echo>${prop.dist.contents}</echo>
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"  classpath="src/selenium.jar"/>
+        
     </target>
 
     <target name="jar">
@@ -20,15 +18,9 @@
             </manifest>
         </jar>
     </target>
-<target name="copied">
-<copydir src="src"
-           dest="build/jar"
-           includes="selenium.jar"
-           excludes="**/*.java"
-  />
-</target>
+
     <target name="run">
-        <java dir="build" classname="navigateToNFLScoreboard">
+     <java jar="build/jar/HelloWorld.jar" fork="true">
          <classpath>
           
             <pathelement location="src/selenium.jar"/>
@@ -37,6 +29,6 @@
     </target>
 
 
-  <target name="test" depends="clean,compile,run">
+  <target name="test" depends="clean,compile,jar,run">
   </target>
 </project>	
